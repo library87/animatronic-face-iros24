@@ -1,12 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animatronic Face Project</title>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/Tong_Robotics_Logo.ico" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/Tong_Robotics_Logo.ico">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Animatronic Face, Robot Facial Expression, Speech-driven Facial Motion Synthesis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Speech-driven Animatronic Robot Face</title>
+  <link rel="icon" type="image/x-icon" href="static/images/Tong_Robotics_Logo.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
 <body>
-    <h1>Animatronic Face Project</h1>
-    <!-- Add your project content here -->
-</body>
-</html>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Driving Animatronic Robot Facial Expression From Speech</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Boren Li</a><sup>*&#8224</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Hang Li</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hangxin Liu</a><sup>&#8224</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Beijing Institute for General Artificial Intelligence (BIGAI)<small><br>National Key Laboratory of General Artificial Intelligence<br></small></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution, <sup>&#8224</sup>Corresponding Author</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2403.12670.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.12670" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/iros24.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        (Download the video to hear the sound if you are interested)
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Animatronic robots aim to enable natural human-robot interaction through lifelike facial expressions. However, generating realistic, speech-synchronized robot expressions is challenging due to the complexities of facial biomechanics and responsive motion synthesis. This paper presents a principled, skinning-centric approach to drive animatronic robot facial expressions from speech. The proposed approach employs linear blend skinning (LBS) as the core representation to guide tightly integrated innovations in embodiment design and motion synthesis. LBS informs the actuation topology, enables human expression retargeting, and allows speech-driven facial motion generation. The proposed approach is capable of generating highly realistic, real-time facial expressions from speech on an animatronic face, significantly advancing robots' ability to replicate nuanced human expressions for natural interaction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/intro.png" alt="intro"/>
+        <h2 class="subtitle has-text-justified">
+            <strong>Expressive speech-driven facial dynamics achieved by the developed animatronic robot face.</strong> The figure showcases the realism and diversity of the generated robot facial expressions, synchronized with the corresponding speech input over time.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/approach_overview.png" alt="approach_overview"/>
+        <h2 class="subtitle has-text-justified">
+            <strong>The proposed approach for creating a speech-driven animatronic robot face using LBS.</strong> The approach comprises three major components: (1) <em>skinning-oriented robot development</em> designs and constructs the animatronic face paired with a kinematics simulator based on the target skinning appearance, (2) <em>skinning motion imitation learning</em> involves learning an LBS-based model from 3D human demonstrations to generate facial motions from speech, and (3) <em>speech-driven robot orchestration</em> generates animatronic facial expressions during inference by utilizing the developed platform, simulator, and learned model.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/skinning_oriented_robot_development.png" alt="skinning_oriented_robot_development"/>
+        <h2 class="subtitle has-text-justified">
+            <strong>The proposed skinning-oriented robot design.</strong> The figure comprises two primary components: (1) <em>LBS-oriented kinematics design</em> to achieve actuation topology for the facial muscular system that matches the designed LBS motion space and references facial anatomy, and (2) <em>electro-mechanical design and development</em> accounting for physical constraints of the embodiment, including key mechanical components of the skin, skeleton and muscular system, as well as the electrical control system.
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/imitation_learning.png" alt="imitation_learning"/>
+      <h2 class="subtitle has-text-justified">
+            <strong>The proposed speech-driven facial skinning motion imitation learning method.</strong> The model (blue block) is trained through the train branch (red block) to generate blendshape coefficients from input speech by imitating human facial skinning motions. During inference (orange block), the model predicts blendshape coefficients, which are further decoded by the robot LBS decoder to generate robot facial skinning motions as reference signals for the kinematics simulator.
+      </h2>
+    </div>
+    <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/exp1_motion_space.png" alt="exp1_motion_space"/>
+        <h2 class="subtitle has-text-justified">
+            <strong>Motion Space Validation.</strong> <strong>Actuated blendshape error for different facial regions (left figure):</strong> Color-coded skinning landmarks represent different facial regions for evaluation. MSE error distributions between simulated and physically actuated blendshapes are presented using violin plots, box and whisker plots, and scattered points, with each point representing one blendshape. Blendshapes are grouped by facial region, and only landmarks in the corresponding region are used for evaluation. Median errors are 2.41mm (eye), 3.27mm (brow), 1.76mm (nose), 4.01mm (cheek), 3.76mm (mouth), and 8.63mm (jaw). <strong>Qualitative comparison (right figure):</strong> Eight comparisons between simulated and actuated blendshapes are shown. Blendshapes (1)-(6) demonstrate high accuracy, while (7) <em>mouth close</em> and (8) <em>jaw open</em> highlight limitations in the current design, exhibiting maximum errors for their respective regions.
+        </h2>
+    </div>
+    <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/exp2_tracking.png" alt="exp2_tracking"/>
+        <h2 class="subtitle has-text-justified">
+            <strong>Tracking Performance Validation.</strong> MSE error distributions between simulated and physically actuated facial articulation sequences are presented using violin plots, box and whisker plots, and scattered points, with each point representing one frame. Evaluation landmarks are grouped by facial region. Ten realistic facial articulation sequences from different speakers with distinct speaking styles were evaluated. Mean median errors across the ten sequences for each facial region are 2.56mm (eye), 3.39mm (brow), 1.74mm (nose), 3.08mm (cheek), 3.86mm (mouth), and 5.03mm (jaw). The results demonstrate that the animatronic robot face achieves accurate tracking performance across various facial regions and speaking styles.
+        </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light"> -->
+  <!-- <div class="hero-body"> -->
+    <!-- <div class="container"> -->
+      <!-- Paper video. -->
+      <!-- <h2 class="title is-3">Video Presentation</h2> -->
+      <!-- <div class="columns is-centered has-text-centered"> -->
+        <!-- <div class="column is-four-fifths"> -->
+          
+          <!-- <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small"> -->
+  <!-- <div class="hero-body"> -->
+    <!-- <div class="container"> -->
+      <!-- <h2 class="title is-3">Another Carousel</h2> -->
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+        <!-- <div class="item item-video1"> -->
+          <!-- <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel1.mp4" -->
+            <!-- type="video/mp4"> -->
+          <!-- </video> -->
+        <!-- </div> -->
+        <!-- <div class="item item-video2"> -->
+          <!-- <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel2.mp4" -->
+            <!-- type="video/mp4"> -->
+          <!-- </video> -->
+        <!-- </div> -->
+        <!-- <div class="item item-video3"> -->
+          <!-- <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel3.mp4" -->
+            <!-- type="video/mp4"> -->
+          <!-- </video> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </section> -->
+<!-- End video carousel -->
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{Li2024DrivingAR,
+        title={Driving Animatronic Robot Facial Expression From Speech},
+        author={Boren Li and Hang Li and Hangxin Liu},
+        year={2024},
+        url={https://api.semanticscholar.org/CorpusID:268531754}
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
