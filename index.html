@@ -65,7 +65,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Beijing Institute for General Artificial Intelligence (BIGAI)<small><br>National Key Laboratory of General Artificial Intelligence<br></small></span>
+                    <span class="author-block">Beijing Institute for General Artificial Intelligence (BIGAI)<small><br>State Key Laboratory of General Artificial Intelligence<br></small></span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution, <sup>&#8224</sup>Corresponding Author</small></span>
                   </div>
 
@@ -148,7 +148,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Animatronic robots aim to enable natural human-robot interaction through lifelike facial expressions. However, generating realistic, speech-synchronized robot expressions is challenging due to the complexities of facial biomechanics and responsive motion synthesis. This paper presents a principled, skinning-centric approach to drive animatronic robot facial expressions from speech. The proposed approach employs linear blend skinning (LBS) as the core representation to guide tightly integrated innovations in embodiment design and motion synthesis. LBS informs the actuation topology, enables human expression retargeting, and allows speech-driven facial motion generation. The proposed approach is capable of generating highly realistic, real-time facial expressions from speech on an animatronic face, significantly advancing robots' ability to replicate nuanced human expressions for natural interaction.
+            Animatronic robots hold the promise of enabling natural human-robot interaction through lifelike facial expressions. However, generating realistic, speech-synchronized robot expressions poses significant challenges due to the complexities of facial biomechanics and the need for responsive motion synthesis. This paper introduces a novel, skinning-centric approach to drive animatronic robot facial expressions from speech input. At its core, the proposed approach employs linear blend skinning (LBS) as a unifying representation, guiding innovations in both embodiment design and motion synthesis. LBS informs the actuation topology, facilitates human expression retargeting, and enables efficient speech-driven facial motion generation. This approach demonstrates the capability to produce highly realistic facial expressions on an animatronic face in real-time at over 4000 fps on a single Nvidia RTX 4090, significantly advancing robots' ability to replicate nuanced human expressions for natural interaction. To foster further research and development in this field, the code has been made publicly available at: https://github.com/library87/OpenRoboExp.
           </p>
         </div>
       </div>
@@ -167,42 +167,42 @@
         <!-- Your image here -->
         <img src="static/images/intro.png" alt="intro"/>
         <h2 class="subtitle has-text-justified">
-            <strong>Expressive speech-driven facial dynamics achieved by the developed animatronic robot face.</strong> The figure showcases the realism and diversity of the generated robot facial expressions, synchronized with the corresponding speech input over time.
+            <strong>Dynamic animatronic robot facial expressions generated from speech.</strong> The figure shows the system's capability to produce diverse and lifelike facial expressions in real-time, synchronized with the corresponding audio speech input. The waveform at the top represents the audio input, while the series of images below showcase the robot's facial responses at different time points.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
         <img src="static/images/approach_overview.png" alt="approach_overview"/>
         <h2 class="subtitle has-text-justified">
-            <strong>The proposed approach for creating a speech-driven animatronic robot face using LBS.</strong> The approach comprises three major components: (1) <em>skinning-oriented robot development</em> designs and constructs the animatronic face paired with a kinematics simulator based on the target skinning appearance, (2) <em>skinning motion imitation learning</em> involves learning an LBS-based model from 3D human demonstrations to generate facial motions from speech, and (3) <em>speech-driven robot orchestration</em> generates animatronic facial expressions during inference by utilizing the developed platform, simulator, and learned model.
+            <strong>The proposed approach for creating a speech-driven animatronic robot face using LBS.</strong> The approach comprises three major components: (1) <em>skinning-oriented robot development</em> designs and constructs the animatronic face paired with a kinematics simulator based on the target skinning appearance, (2) <em>skinning motion imitation learning</em> involves training an LBS-based model from 3D human demonstrations to generate facial expressions from speech input, and (3) <em>speech-driven robot orchestration</em> generates animatronic facial expressions during inference by utilizing the developed platform, simulator, and learned model. The diagram highlights key development steps, outputs, and inference processes, demonstrating the end-to-end workflow from concept to final animatable robot face.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
         <img src="static/images/skinning_oriented_robot_development.png" alt="skinning_oriented_robot_development"/>
         <h2 class="subtitle has-text-justified">
-            <strong>The proposed skinning-oriented robot design.</strong> The figure comprises two primary components: (1) <em>LBS-oriented kinematics design</em> to achieve actuation topology for the facial muscular system that matches the designed LBS motion space and references facial anatomy, and (2) <em>electro-mechanical design and development</em> accounting for physical constraints of the embodiment, including key mechanical components of the skin, skeleton and muscular system, as well as the electrical control system.
+            <strong>The proposed skinning-oriented robot design.</strong> The figure comprises two primary components: (1) <em>LBS-oriented kinematics design</em>, which showcases the facial mesh model with strategically placed control points for various facial features to achieve actuation topology for the facial muscular system that matches the designed LBS motion space and references facial anatomy, and (2) <em>electro-mechanical design and development</em> accounting for physical constraints of the embodiment, including key mechanical components of the skin, skeleton and muscular system, as well as the electrical control system. This comprehensive view demonstrates how the theoretical LBS model is translated into a functional, physically embodied animatronic face.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
       <img src="static/images/imitation_learning.png" alt="imitation_learning"/>
       <h2 class="subtitle has-text-justified">
-            <strong>The proposed speech-driven facial skinning motion imitation learning method.</strong> The model (blue block) is trained through the train branch (red block) to generate blendshape coefficients from input speech by imitating human facial skinning motions. During inference (orange block), the model predicts blendshape coefficients, which are further decoded by the robot LBS decoder to generate robot facial skinning motions as reference signals for the kinematics simulator.
+            <strong>The proposed speech-driven facial skinning motion imitation learning method.</strong> The model architecture (blue section) comprises three key components: (1) a <em>frame-level speech encoder</em> that processes audio input and generates phoneme logits, (2) a <em>speaking style encoder</em> that captures individual speaking styles, and (3) an <em>LBS encoder</em> that generates blendshape coefficients.  During training (red section), the model learns to imitate human facial skinning motions by minimizing the difference between generated and target expressions. In the inference branch (orange section), the trained model generates blendshape coefficients for the robot LBS decoder, producing robot-specific facial skinning motions as reference signals for the downstream kinematics simulator.
       </h2>
     </div>
     <div class="item">
         <!-- Your image here -->
         <img src="static/images/exp1_motion_space.png" alt="exp1_motion_space"/>
         <h2 class="subtitle has-text-justified">
-            <strong>Motion Space Validation.</strong> <strong>Actuated blendshape error for different facial regions (left figure):</strong> Color-coded skinning landmarks represent different facial regions for evaluation. MSE error distributions between simulated and physically actuated blendshapes are presented using violin plots, box and whisker plots, and scattered points, with each point representing one blendshape. Blendshapes are grouped by facial region, and only landmarks in the corresponding region are used for evaluation. Median errors are 2.41mm (eye), 3.27mm (brow), 1.76mm (nose), 4.01mm (cheek), 3.76mm (mouth), and 8.63mm (jaw). <strong>Qualitative comparison (right figure):</strong> Eight comparisons between simulated and actuated blendshapes are shown. Blendshapes (1)-(6) demonstrate high accuracy, while (7) <em>mouth close</em> and (8) <em>jaw open</em> highlight limitations in the current design, exhibiting maximum errors for their respective regions.
+            <strong>Motion Space Validation.</strong> <strong>Actuated blendshape error for different facial regions (left figure):</strong> Color-coded skinning landmarks represent different facial regions for evaluation. The 3D face model shows color-coded landmarks for different facial areas. Error distributions between simulated and physically actuated blendshapes are visualized using violin plots, box plots, and scattered points. Each point represents a single blendshape, evaluated using region-specific landmarks. Median errors (in mm) are provided for each facial region, ranging from 1.76mm (nose) to 8.63mm (jaw). <strong>Qualitative comparison (right figure):</strong> Eight comparisons between simulated and actuated blendshapes are shown. Blendshapes (1)-(6) demonstrate high accuracy, while (7) <em>mouth close</em> and (8) <em>jaw open</em> highlight limitations in the current design, exhibiting maximum errors for their respective regions.
         </h2>
     </div>
     <div class="item">
         <!-- Your image here -->
         <img src="static/images/exp2_tracking.png" alt="exp2_tracking"/>
         <h2 class="subtitle has-text-justified">
-            <strong>Tracking Performance Validation.</strong> MSE error distributions between simulated and physically actuated facial articulation sequences are presented using violin plots, box and whisker plots, and scattered points, with each point representing one frame. Evaluation landmarks are grouped by facial region. Ten realistic facial articulation sequences from different speakers with distinct speaking styles were evaluated. Mean median errors across the ten sequences for each facial region are 2.56mm (eye), 3.39mm (brow), 1.74mm (nose), 3.08mm (cheek), 3.86mm (mouth), and 5.03mm (jaw). The results demonstrate that the animatronic robot face achieves accurate tracking performance across various facial regions and speaking styles.
+            <strong>Tracking Performance Validation.</strong> MSE error distributions between simulated and physically actuated facial articulation sequences are presented using violin plots, box and whisker plots, and scattered points, with each point representing one frame. Evaluation landmarks are grouped by facial region. Ten realistic facial articulation sequences from different speakers with distinct speaking styles were evaluated. Mean median errors across the ten sequences for each facial region are 2.56mm (eye), 3.39mm (brow), 1.74mm (nose), 3.08mm (cheek), 3.86mm (mouth), and 5.03mm (jaw). This comprehensive visualization demonstrates the animatronic face's ability to maintain consistent tracking performance across diverse speaking styles while highlighting region-specific variations in accuracy.
         </h2>
     </div>
   </div>
@@ -215,10 +215,10 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{li2024driving,
+      <pre><code>@inproceedings{li2024driving,
          title={Driving Animatronic Robot Facial Expression From Speech},
          author={Li, Boren and Li, Hang and Liu, Hangxin},
-         journal={arXiv preprint arXiv:2403.12670},
+         booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
          year={2024},
          url={https://arxiv.org/abs/2403.12670}}</code></pre>
     </div>
